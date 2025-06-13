@@ -7,8 +7,6 @@ import { useState } from 'react'
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 
-
-
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
@@ -23,8 +21,7 @@ function App() {
 
   return (
     <div className='home'>
-
-      
+  
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
