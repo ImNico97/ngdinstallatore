@@ -18,6 +18,18 @@ function NavBar() {
     });
   };
 
+    const handleContactClick = (e) => {
+    e.preventDefault();
+    
+    const connectElement = document.getElementById('connect');
+    if (connectElement) {
+      connectElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -62,11 +74,9 @@ function NavBar() {
                 {copied ? <Check /> : <i className="bi-envelope"></i>}
               </a>
             </div>
-            <Nav.Link href="#connect">
-              <button>
-                <span>Contattaci</span>
-              </button>
-            </Nav.Link>
+            <button onClick={handleContactClick} className="contact-btn">
+              <span>Contattaci</span>
+            </button>
           </div>
         </Navbar.Collapse>
       </Container>

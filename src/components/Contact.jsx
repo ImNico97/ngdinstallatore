@@ -14,6 +14,8 @@ function Contact() {
   const [buttonText, setButtonText] = useState("Invia");
   const [status, setStatus] = useState({});
 
+
+
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,

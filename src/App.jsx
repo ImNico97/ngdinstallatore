@@ -16,9 +16,9 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 
 function App() {
   return (
-      <div className='home'>
-        <Navbar />
+    <div className='home'>
         <ScrollToTop />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/services" element={<Services />} />

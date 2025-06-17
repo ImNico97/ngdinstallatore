@@ -16,8 +16,21 @@ function Home() {
         };
     
     const [showMaintenance, setShowMaintenance] = useState(true);
+    
+    // Funzione per scrollare al componente Contact
+    const handleContactClick = (e) => {
+        e.preventDefault();
+        const connectElement = document.getElementById('connect');
+        if (connectElement) {
+            connectElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
-        <Container fluid className="home px-0 fade-in">
+        <Container fluid className="home px-0 fade-in-home">
 
             {showMaintenance && (
             <Alert
@@ -26,7 +39,15 @@ function Home() {
                 onClose={() => setShowMaintenance(false)}
                 className="text-center m-0 rounded-0"
             >
-                🔧 Il sito è attualmente in manutenzione. Alcuni servizi potrebbero non essere disponibili. <br />Per qualsiasi informazione trovi i contatti in fondo al sito, ci scusiamo per il disagio.
+                🔧 Sito in aggiornamento <br />
+                Stiamo lavorando per migliorare la tua esperienza sul nostro sito. Alcuni servizi potrebbero essere temporaneamente non disponibili. <br />
+                Hai bisogno di assistenza immediata? <span onClick={handleContactClick} style={{ 
+                        color: '#0066cc', 
+                        cursor: 'pointer', 
+                        textDecoration: 'underline', 
+                        fontWeight: 'bold' 
+                    }}>Contattaci</span>  utilizzando i recapiti in fondo alla pagina - saremo felici di aiutarti!
+                Grazie per la pazienza.
             </Alert>
             )}
 
@@ -46,9 +67,7 @@ function Home() {
                             </button>
                     </Link>
                 </div>
-                
                 <img className="home-img" src={cucinaLuce} alt="cucinaLuce" />
-
             </div>
 
             <div className="home-text">
@@ -57,8 +76,6 @@ function Home() {
                 <p><em>"Più luce, più spazio, più vita: portiamo il cielo dentro casa tua con installazioni su misura."</em></p>
                 <br />
             </div>
-
-            
 
         </Container>
     );

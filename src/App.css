@@ -107,6 +107,10 @@ p.danger {
   opacity: 0;
   animation: fadeIn 0.6s ease-in-out forwards;
 }
+.fade-in-home {
+  opacity: 0;
+  animation: fadeIn 1.7s ease-in-out forwards;
+}
 
 @keyframes fadeIn {
   to {
@@ -365,7 +369,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   
   nav.navbar {
-    min-height: 120px;
+    min-height: 100px;
     background: #ff00003d !important;
     backdrop-filter: blur(10px) drop-shadow(0 0 0.75rem #ff0000);
   }
@@ -394,7 +398,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 .logoNgd{
-  min-width: 120px;
+  min-width: 105px;
 }
 
 /************ Home Css ************/
