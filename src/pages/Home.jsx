@@ -7,14 +7,17 @@ import { Alert } from "react-bootstrap";
 import cucinaLuce from "../assets/img/cucina-luce.jpg";
 import cucinaNoLuce from "../assets/img/cucina-no-luce.jpg";
 
-
-
-
-
 function Home() {
+
+    const [activeLink, setActiveLink] = useState("home");
+    const onUpdateActiveLink = (value) => {
+        setActiveLink(value);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    
     const [showMaintenance, setShowMaintenance] = useState(true);
     return (
-        <Container fluid className="home px-0">
+        <Container fluid className="home px-0 fade-in">
 
             {showMaintenance && (
             <Alert
@@ -31,11 +34,16 @@ function Home() {
                 
                 <img className="home-img" src={cucinaNoLuce} alt="cucinaNoLuce" />
                 
-                <div className="home-button">
-                    <Link to={"/services"}>
-                        <button >
-                            <span>Servizi</span>
-                        </button>
+                <div className="home-button ">
+                    <Link to={"/services"}
+                        className={
+                            activeLink === "services" ? "active navbar-link" : "navbar-link"}
+
+                            onClick={() => onUpdateActiveLink("services")}> 
+                            
+                            <button >
+                                <span>Servizi</span>
+                            </button>
                     </Link>
                 </div>
                 
