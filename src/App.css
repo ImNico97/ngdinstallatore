@@ -353,7 +353,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     justify-content: center;
   }
   
-  
   nav.navbar {
     min-height: 120px;
     background: #ff00003d !important;
@@ -363,7 +362,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media screen and (max-width: 768px){
   nav.navbar{
-    min-height: 160px;
+    min-height: 100px;
   }
   .navbar-text button{
     font-size: 20px;
@@ -374,13 +373,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 15px;
   }
 }
+
 @media screen and (max-width: 576px){
   nav.navbar{
-    min-height: 150px;
+    min-height: 80px;
   }
   .navbar-link{
     font-size: 20px !important;
   }
+}
+.logoNgd{
+  min-width: 120px;
 }
 
 /************ Home Css ************/
@@ -520,7 +523,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Tablet Small */
 @media screen and (max-width: 768px) {
   .home {
-    margin-top: 80px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
   }
@@ -566,7 +569,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Mobile */
 @media screen and (max-width: 576px) {
   .home {
-    margin-top: 75px;
+    margin-top: 40px;
   }
   
   .home-img ,.image-container{
@@ -596,7 +599,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Small Mobile */
 @media screen and (max-width: 480px) {
   .home {
-    margin-top: 70px;
+    margin-top: 35px;
   }
   
   .home-img , .image-container{
@@ -636,6 +639,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   color: #ff0000e6;
   font-size: 50px;
+  text-align: center;
 }
 
 .about-us, .services{
@@ -653,6 +657,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 10px 0;
   margin-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.525);
+}
+
+ul{
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 1500px) {
@@ -675,7 +683,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media screen and (max-width: 576px) {
   .service-title{
-    margin-top: 90px;
+    margin: 90px 0 0 0;
     font-size: 40px;
 
   }
