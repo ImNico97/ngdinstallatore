@@ -37,7 +37,7 @@ function NavBar() {
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container fluid className="px-5">
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={NavLink} to="/">
           <img src={LogoNgd} alt="LogoNGD" className="logoNgd" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
