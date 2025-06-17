@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const IubendaCookieSolution = ({ 
   siteId = "4063563", 
   cookiePolicyId = "13394686", 
-  lang = "it" 
+  lang = "lang" 
 }) => {
   useEffect(() => {
     // Inizializza la configurazione globale di Iubenda
