@@ -357,7 +357,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   
   .logoNgd{
-    width: 190px;
+    width: 280px;
   }
 
   /* Modifica il bottone per mobile */
@@ -409,7 +409,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 @media screen and (max-width: 480px){
   .logoNgd{
-    width: 120px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .logoNgd{
+    width: 150px;
   }
 }
 /************ Home Css ************/
@@ -646,9 +652,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Extra Small Mobile */
 @media screen and (max-width: 320px) {
 
-    .home {
-    margin-top: 50px;
-    }
+  .home {
+  margin-top: 50px;
+  }
   
   .home-img , .image-container{
     max-height: 160px;
