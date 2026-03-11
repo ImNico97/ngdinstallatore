@@ -15,11 +15,13 @@ function NavBar() {
 };
 
   const email = "installatore.v@gmail.com";
-  const handleCopy = () => {
+
+  const handleCopy = (e) => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); // reset "copiato" dopo 2 sec
     });
+    e.preventDefault()
   };
 
     const handleContactClick = (e) => {
