@@ -51,7 +51,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #6e6e6e26 !important;
+  background-color: #ffffff !important;
   color: #ffffff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -133,9 +133,9 @@ span.logo2{
 }
 
 .logoNgd{
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  display: block;
+  height: 100px;   /* scegli tu: 70px, 80px, 90px */
+  width: auto;
 }
 
 nav.navbar {
@@ -160,6 +160,8 @@ nav.navbar a.navbar-brand h1 {
 nav.navbar a.navbar-brand {
   width: 17%;
   margin: 0%;
+  display: flex;
+  align-items: center;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 500;
@@ -179,7 +181,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active{
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover{
-  color: rgb(255, 255, 255) !important;
+  color: rgb(159, 159, 159) !important;
 }
 
 .scroll-watcher{
