@@ -9,6 +9,10 @@ function NavBar() {
   const location = useLocation(); // 👈 Ottieni il path corrente
   const [scrolled, setScrolled] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const handleNavClick = () => {
+  setExpanded(false);
+};
 
   const email = "installatore.v@gmail.com";
   const handleCopy = () => {
@@ -21,6 +25,8 @@ function NavBar() {
     const handleContactClick = (e) => {
     e.preventDefault();
     
+    setExpanded(false)
+
     const connectElement = document.getElementById('connect');
     if (connectElement) {
       connectElement.scrollIntoView({ 
@@ -47,9 +53,9 @@ function NavBar() {
     location.pathname === path ? "active navbar-link" : "navbar-link";
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="lg" className={scrolled ? "scrolled" : ""} expanded={expanded} onToggle={(isOpen) => setExpanded(isOpen)}>
       <Container fluid className="px-5">
-        <Navbar.Brand as={NavLink} to="/">
+        <Navbar.Brand as={NavLink} to="/" onClick={handleNavClick}>
           <img src={LogoNgd} alt="LogoNGD" className="logoNgd" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -57,13 +63,13 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav" className="collapsed">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/" className={isActive("/")}>
+            <Nav.Link as={NavLink} to="/" className={isActive("/")} onClick={handleNavClick}>
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/services" className={isActive("/services")}>
+            <Nav.Link as={NavLink} to="/services" className={isActive("/services")} onClick={handleNavClick}>
               Servizi
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/aboutUs" className={isActive("/aboutUs")}>
+            <Nav.Link as={NavLink} to="/aboutUs" className={isActive("/aboutUs")} onClick={handleNavClick}>
               Chi Siamo?
             </Nav.Link>
           </Nav>
