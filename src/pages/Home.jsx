@@ -37,7 +37,7 @@ function Home() {
                 variant="warning"
                 dismissible
                 onClose={() => setShowMaintenance(false)}
-                className="text-center m-0 rounded-0"
+                className="text-center m-0 pt-4 rounded-0"
             >
                 🔧 Sito in aggiornamento <br />
                 Stiamo lavorando per migliorare la tua esperienza sul nostro sito. Alcuni servizi potrebbero essere temporaneamente non disponibili. <br />
