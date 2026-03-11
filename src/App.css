@@ -407,6 +407,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   min-width: 105px;
 }
 
+@media screen and (max-width: 480px){
+  .logoNgd{
+    width: 120px;
+  }
+}
 /************ Home Css ************/
 
 .home{
@@ -590,7 +595,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Mobile */
 @media screen and (max-width: 576px) {
   .home {
-    margin-top: 40px;
+    margin-top: 50px;
   }
   
   .home-img ,.image-container{
@@ -620,7 +625,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Small Mobile */
 @media screen and (max-width: 480px) {
   .home {
-    margin-top: 35px;
+    margin-top: 50px;
   }
   
   .home-img , .image-container{
@@ -640,6 +645,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Extra Small Mobile */
 @media screen and (max-width: 320px) {
+
+    .home {
+    margin-top: 50px;
+    }
+  
   .home-img , .image-container{
     max-height: 160px;
   }
