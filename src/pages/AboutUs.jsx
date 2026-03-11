@@ -1,6 +1,6 @@
 const AboutUs = () => {
     return (
-        <div id="aboutUs" className="d-flex flex-column justify-content-center align-items-center pt-1 fade-in">
+        <div id="aboutUs" className="d-flex flex-column justify-content-center align-items-center pt-1">
                 <h1 className="service-title">Scopri di più su di noi...</h1>
 
                 <span className="about-us">
